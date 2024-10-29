@@ -22,10 +22,7 @@ const loadMessages = () => {
 
 
 app.get('/get-all-messages', (req, res) => {
-    const allMessages = messages.map(msg => ({
-        ...msg,
-        readableTimestamp: moment.unix(msg.timestamp).tz('Asia/Kolkata').format('YYYY-MM-DD HH:mm:ss')
-    }));
+    const allMessages = messages;
 
     res.json({ status: 'success', messages: allMessages });
 });
