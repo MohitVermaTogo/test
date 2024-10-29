@@ -24,7 +24,7 @@ const loadMessages = () => {
 app.get('/get-all-messages', (req, res) => {
     const allMessages = messages;
 
-    res.json({ status: 'success', messages: allMessages });
+    res.json({ status: 'success', messages: 'testing' });
 });
 
 app.delete('/flush-messages', (req, res) => {
